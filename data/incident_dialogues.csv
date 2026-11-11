@@ -1,0 +1,334 @@
+Record_ID,Conversation_ID,Incident_Type,Speaker_Role,Conversation,Masked_Utterance,Correct_Token
+IC-001,CASE-001,Suspicious upload,Manager,"Manager: The first message described a download from the supplier site.
+Engineer: The traffic direction is the other way around. Data left the workstation.
+Analyst: The proxy logs show a large request to an unfamiliar destination.
+Support: The account owner says they were not sharing files at that time.
+Engineer: The destination is an external storage service. The connection has been blocked.
+Analyst: The request contained an archive. We are checking which files were included in that archive.",The files left the workstation in an [MASK].,archive
+IC-002,CASE-002,Network boundary,Analyst,"Manager: The first connection was listed as internal in the ticket.
+Engineer: The address was translated at the gateway. The original source was outside our network.
+Analyst: The internal host accepted requests on a service that should not have been exposed.
+Engineer: The temporary firewall exception was left active after the support session.
+Manager: Save the existing configuration, then remove the exception.
+Engineer: The exception is removed. The service is no longer reachable from the internet.",The service is no longer reachable from the [MASK].,internet
+IC-003,CASE-003,Command execution,Analyst,"Manager: The user described the attachment as a picture of a receipt.
+Analyst: The file name was misleading. The attachment launched a command interpreter.
+Support: The user saw a window flash briefly before the browser opened.
+Engineer: The process tree records the interpreter and the child process it started.
+Manager: Save the process tree and the original attachment before cleanup.
+Analyst: The interpreter downloaded a script. The script then contacted the external server.",The downloaded script contacted an external [MASK].,server
+IC-004,CASE-004,Remote access,Engineer,"Support: The user expected a support technician to connect to the device.
+Manager: There is no approved remote support ticket for that time.
+Analyst: The session used a remote access program installed that afternoon.
+Engineer: The software is not in the approved device configuration.
+Manager: End the connection after collecting the session details.
+Analyst: The remote session has ended. The program and its installation history are retained as evidence.",The unauthorized remote [MASK] has ended.,session
+IC-005,CASE-005,Evidence timeline,Analyst,"Manager: The incident notes currently start with the user's phone call.
+Analyst: The account activity began earlier. The phone call is not the first event.
+Engineer: The directory logs show the initial sign-in and the later access changes.
+Support: The user can identify their last legitimate sign-in.
+Analyst: I am comparing that time with the directory records and the gateway records.
+Manager: Put the verified events in chronological order and keep the source records for each timestamp.",The verified events are arranged in chronological [MASK].,order
+IC-006,CASE-006,Incident ownership,Analyst,"Support: The ticket was originally assigned to the application team.
+Engineer: The application is healthy. The problem is an unauthorized account session.
+Analyst: The security team has accepted the incident and started the account review.
+Manager: Keep the application team on the call for service dependencies.
+Support: The ticket owner has been changed, and both teams can see the latest notes.
+Manager: The security team owns the investigation. The application team will support service recovery.",The investigation is owned by the [MASK] team.,security
+IC-007,CASE-007,Email destination,Engineer,"Manager: The initial alert described an internal message between two employees.
+Analyst: The displayed name was internal, but the actual destination was outside the company.
+Engineer: The mail trace records both the displayed recipient and the delivery address.
+Support: The named employee did not receive the message.
+Manager: Save the mail trace and contact the account owner using the support number.
+Analyst: The delivery went to an external address. The message contained an internal attachment.",The message was delivered to an external [MASK].,address
+IC-008,CASE-008,Queue handoff,Analyst,"Support: The first complaint was sent to the billing queue.
+Manager: The complaint includes an unexpected login prompt, so security needs to review it.
+Analyst: The message link points outside the approved application domain.
+Engineer: The message has been retained, and the destination is blocked.
+Support: The billing team has transferred the ticket and told the caller not to reopen the link.
+Manager: The ticket is now in the security queue. Keep the original message attached to the case.",The incident ticket is now in the [MASK] queue.,security
+IC-009,CASE-008,Queue handoff,Engineer,"Support: The first complaint was sent to the billing queue.
+Manager: The complaint includes an unexpected login prompt, so security needs to review it.
+Analyst: The message link points outside the approved application domain.
+Engineer: The message has been retained, and the destination is blocked.
+Support: The billing team has transferred the ticket and told the caller not to reopen the link.
+Manager: The ticket is now in the security queue. Keep the original message attached to the case.",The investigation retains the original [MASK].,message
+IC-010,CASE-009,Identity response,Manager,"Support: The caller initially asked for a new laptop because sign-in kept failing.
+Analyst: The device itself is fine. The account has sign-ins that the owner does not recognize.
+Manager: Stop any active sessions before discussing replacement equipment.
+Engineer: I have disabled the account and revoked the existing sessions.
+Support: The owner is available for identity verification on the help-desk call.","After verification, reset the password and require a [MASK] sign-in.",new
+IC-011,CASE-010,Endpoint status,Analyst,"Support: The user says the issue started during a routine software update.
+Engineer: The update finished successfully. A different process created the unusual connections.
+Analyst: The security agent is online and has uploaded the process history.
+Manager: Preserve that history and disconnect the device from the office network.
+Engineer: The isolation action completed. The security agent still has its management connection.",The [MASK] is isolated. The process history is available in the investigation console.,device
+IC-012,CASE-001,Suspicious upload,Analyst,"Manager: The first message described a download from the supplier site.
+Engineer: The traffic direction is the other way around. Data left the workstation.
+Analyst: The proxy logs show a large request to an unfamiliar destination.
+Support: The account owner says they were not sharing files at that time.
+Engineer: The destination is an external storage service. The connection has been blocked.",The request contained an archive. We are checking which [MASK] were included in that archive.,files
+IC-013,CASE-011,Malicious redirect,Analyst,"Support: The user thought the browser was opening the normal payroll application.
+Engineer: The payroll server is healthy. The browser reached another address first.
+Analyst: The navigation history shows a redirect from the link in the message.
+Manager: Save the original message and the complete navigation history.
+Engineer: The final destination used a recently registered domain.",The domain served a counterfeit login page. The redirect is the link between the email and that [MASK].,page
+IC-014,CASE-012,Access review,Engineer,"Manager: The first update said a new administrator had joined the support group.
+Support: There was no approved staffing change. That account does not belong to our support team.
+Analyst: The directory records show a group change after the unusual sign-in.
+Engineer: The account was given administrator access during that session.
+Manager: Remove the unauthorized group membership and save the audit records.",The membership has been removed. The account [MASK] longer has administrator privileges.,no
+IC-015,CASE-002,Network boundary,Engineer,"Manager: The first connection was listed as internal in the ticket.
+Engineer: The address was translated at the gateway. The original source was outside our network.
+Analyst: The internal host accepted requests on a service that should not have been exposed.
+Engineer: The temporary firewall exception was left active after the support session.
+Manager: Save the existing configuration, then remove the exception.",The exception is removed. The service is [MASK] longer reachable from the internet.,no
+IC-016,CASE-013,File integrity,Analyst,"Support: The caller said the missing files might have been deleted during maintenance.
+Engineer: The maintenance job did not run on this device.
+Analyst: The files are still present, but the contents are unreadable and the names have changed.
+Manager: Keep a copy of the affected files for the investigation.
+Engineer: The verified backup contains readable copies from before the incident.",The original [MASK] were encrypted. The backup is separate from the affected device.,files
+IC-017,CASE-014,Evidence storage,Engineer,"Support: The user offered to send the suspicious files in a normal support email.
+Analyst: Do not forward the files. The collection agent has already captured them.
+Engineer: The captured files are in the restricted case folder.
+Manager: Limit access to the investigation team and record every transfer.
+Analyst: The file hashes match the copies collected from the device.",The case folder is on the evidence server. The original files have [MASK] been changed.,not
+IC-018,CASE-015,Priority correction,Manager,"Support: The opening ticket was marked low priority because only one caller had contacted us.
+Analyst: The same activity is now visible on several accounts.
+Engineer: The connections span two office networks and an application service.
+Manager: Escalate the incident and contact the service owners.
+Support: The service owners have joined the response call.",The incident is now high priority. The earlier low-priority status is [MASK] longer current.,no
+IC-019,CASE-016,Office scope,Engineer,"Support: The first caller was from the north office, so the ticket named that site.
+Engineer: The affected workstation is assigned to the south office. The caller was helping remotely.
+Analyst: The device inventory and gateway logs both identify the south office.
+Manager: Update the scope before contacting the local support team.
+Support: The south office team has joined and confirmed the device location.",The north [MASK] is not affected. The response is focused on the south office.,office
+IC-020,CASE-016,Office scope,Engineer,"Support: The first caller was from the north office, so the ticket named that site.
+Engineer: The affected workstation is assigned to the south office. The caller was helping remotely.
+Analyst: The device inventory and gateway logs both identify the south office.
+Manager: Update the scope before contacting the local support team.
+Support: The south office team has joined and confirmed the device location.",The north office is [MASK] affected. The response is focused on the south office.,not
+IC-021,CASE-017,Password reuse,Manager,"Support: The user thought the sign-in prompt belonged to the normal application.
+Analyst: The prompt was served by the site linked in the suspicious message.
+Manager: Disable the affected account while the owner verifies the activity.
+Engineer: The account had an active session on a second device.
+Support: The owner confirmed that the second device was not theirs.",Revoke the sessions and reset the password. The owner must register a [MASK] authentication factor.,new
+IC-022,CASE-005,Evidence timeline,Manager,"Manager: The incident notes currently start with the user's phone call.
+Analyst: The account activity began earlier. The phone call is not the first event.
+Engineer: The directory logs show the initial sign-in and the later access changes.
+Support: The user can identify their last legitimate sign-in.
+Analyst: I am comparing that time with the directory records and the gateway records.",Put the verified events in chronological [MASK] and keep the source records for each timestamp.,order
+IC-023,CASE-018,Gateway isolation,Engineer,"Manager: The first suggestion was to shut down the entire office network.
+Engineer: The affected traffic comes from one gateway session. We can contain that session separately.
+Analyst: The gateway logs identify the connection and its account.
+Support: The account owner confirms that the connection is not legitimate.
+Manager: Save the session details, end that session, and disable the account.",The account is disabled and the gateway session has ended. Normal office traffic is [MASK] running.,still
+IC-024,CASE-019,Inbound filtering,Engineer,"Manager: The previous rule allowed the supplier's old address during migration.
+Engineer: The supplier moved to a new address last week. The old exception should have expired.
+Analyst: The suspicious requests are using the old address, not the current supplier address.
+Support: The supplier confirmed that the requests are not theirs.
+Manager: Save the current rule and remove the old exception.",The old address is now blocked at the firewall. The approved supplier connection is still [MASK].,available
+IC-025,CASE-020,File transfer review,Analyst,"Support: The sender claimed the file transfer was an approved customer delivery.
+Manager: The customer has no delivery scheduled for this account.
+Analyst: The access logs show the files were read during the unusual account session.
+Engineer: The archive was sent to a storage account outside the company.
+Manager: Block further access and preserve the file list and transfer records.",The transfer records identify the destination account. The customer delivery explanation does [MASK] match the records.,not
+IC-026,CASE-021,Scope correction,Analyst,"Manager: The first update said every account in the department was affected.
+Analyst: That count included normal sign-ins from the scheduled maintenance.
+Engineer: The suspicious sessions are linked to three accounts, not the whole department.
+Support: The owners of those three accounts have confirmed the activity was not theirs.
+Manager: Keep those accounts disabled and correct the scope in the incident notes.",The verified count is three affected accounts. The remaining department [MASK] are clear.,accounts
+IC-027,CASE-022,Report distribution,Manager,"Support: The first summary was sent to the normal distribution list.
+Manager: That list contains external contacts. Restrict the incident details to the response team.
+Analyst: The summary includes account identifiers and evidence collection status.
+Engineer: The case folder already restricts access to the response team.
+Support: The updated summary has been uploaded to the restricted case folder.",The response [MASK] can read it there. Do not send the detailed summary to the external contacts.,team
+IC-028,CASE-022,Report distribution,Manager,"Support: The first summary was sent to the normal distribution list.
+Manager: That list contains external contacts. Restrict the incident details to the response team.
+Analyst: The summary includes account identifiers and evidence collection status.
+Engineer: The case folder already restricts access to the response team.
+Support: The updated summary has been uploaded to the restricted case folder.",The response team can read it there. Do [MASK] send the detailed summary to the external contacts.,not
+IC-029,CASE-023,Network capture,Engineer,"Manager: The early ticket included only a screenshot of the browser warning.
+Analyst: The screenshot is useful, but the connection details are also needed.
+Engineer: The gateway retained the connection records from that time.
+Support: The user has supplied the time they opened the message.
+Analyst: The network capture records the requests sent immediately after the link opened.",The capture [MASK] is in the evidence folder alongside the original screenshot.,file
+IC-030,CASE-024,Temporary access removal,Engineer,"Manager: The supplier needed a temporary connection during yesterday's recovery work.
+Engineer: The recovery work finished last night. The exception is still active at the gateway.
+Analyst: The exception allows access from the old supplier address. That address appears in the current alert.
+Support: The supplier confirmed they have moved the support session to their new address.
+Manager: Save the exception and the connection records, then remove the old access.",The old exception is [MASK] longer needed. The approved supplier connection is still active.,no
+IC-031,CASE-024,Temporary access removal,Engineer,"Manager: The supplier needed a temporary connection during yesterday's recovery work.
+Engineer: The recovery work finished last night. The exception is still active at the gateway.
+Analyst: The exception allows access from the old supplier address. That address appears in the current alert.
+Support: The supplier confirmed they have moved the support session to their new address.
+Manager: Save the exception and the connection records, then remove the old access.",The old exception is no [MASK] needed. The approved supplier connection is still active.,longer
+IC-032,CASE-025,Retired account,Engineer,"Support: The account in the alert belonged to the previous support contractor.
+Manager: The contractor's access should have ended after the service handover.
+Analyst: The account still had an active session at the time of the alert.
+Engineer: The new contractor uses a different account. There is no dependency on the old account.
+Manager: Revoke the existing session and disable the retired account.",The old account is [MASK] longer used by the support team. Its remaining session has been revoked.,no
+IC-033,CASE-025,Retired account,Engineer,"Support: The account in the alert belonged to the previous support contractor.
+Manager: The contractor's access should have ended after the service handover.
+Analyst: The account still had an active session at the time of the alert.
+Engineer: The new contractor uses a different account. There is no dependency on the old account.
+Manager: Revoke the existing session and disable the retired account.",The old account is no [MASK] used by the support team. Its remaining session has been revoked.,longer
+IC-034,CASE-026,Server scope revision,Analyst,"Manager: The opening ticket listed the file server as an affected system.
+Analyst: That entry came from the caller's description, not from the connection records.
+Engineer: The file server shows normal activity. The unusual session was on the mail server.
+Support: The caller has confirmed that the missing files were unrelated to this incident.
+Manager: Correct the scope and keep the original ticket details for the timeline.",The incident notes [MASK] longer name the file server as affected. The mail server is still under investigation.,no
+IC-035,CASE-027,Owner approval,Support,"Support: The caller said the account owner had authorized the remote session.
+Analyst: The owner was away from the office at that time. The approval message needs verification.
+Engineer: The session details show access from a device that the owner does not recognize.
+Support: The owner has joined from the phone number already in our directory.
+Manager: Ask the owner about that exact session and save their response with the evidence.",The account owner did [MASK] approve the remote session. The approval message did not come from them.,not
+IC-036,CASE-027,Owner approval,Support,"Support: The caller said the account owner had authorized the remote session.
+Analyst: The owner was away from the office at that time. The approval message needs verification.
+Engineer: The session details show access from a device that the owner does not recognize.
+Support: The owner has joined from the phone number already in our directory.
+Manager: Ask the owner about that exact session and save their response with the evidence.",The account owner did not approve the remote session. The approval message did [MASK] come from them.,not
+IC-037,CASE-028,Power state,Manager,"Support: The affected laptop has been brought to the support desk.
+Analyst: Was it shut down before the owner brought it over?
+Support: No. The owner disconnected the network cable and left the laptop running.
+Engineer: The device is on the isolated collection network. Its normal office connection is disabled.
+Analyst: The collection agent can reach it. Leave its power state unchanged until the capture finishes.",The laptop must remain powered on until collection is complete. Do [MASK] close the lid.,not
+IC-038,CASE-029,Closed connection,Engineer,"Manager: The early update says the suspicious connection is still active.
+Engineer: That update was sent before the gateway session was removed.
+Analyst: The current connection records show no traffic from the affected account.
+Support: The account owner has been told that a new sign-in will be required.
+Manager: Update the containment status and preserve the records for the removed session.",The suspicious connection is [MASK] longer active. The account remains disabled for review.,no
+IC-039,CASE-029,Closed connection,Engineer,"Manager: The early update says the suspicious connection is still active.
+Engineer: That update was sent before the gateway session was removed.
+Analyst: The current connection records show no traffic from the affected account.
+Support: The account owner has been told that a new sign-in will be required.
+Manager: Update the containment status and preserve the records for the removed session.",The suspicious connection is no [MASK] active. The account remains disabled for review.,longer
+IC-040,CASE-030,Unaffected office,Analyst,"Support: The first caller was from the branch office and described several devices as affected.
+Analyst: The device identifiers in the evidence belong to the head office.
+Engineer: The branch connection records are normal. The caller was helping the head office remotely.
+Manager: Confirm the device location before sending local support staff.
+Support: The head office team has located the affected device. The branch team has no matching alert.",The branch office is not affected. The response work is being handled at the head [MASK].,office
+IC-041,CASE-031,Duplicate ticket,Support,"Manager: The queue currently shows two separate incidents for the same suspicious message.
+Support: The user submitted one ticket and then called us. The call created the second ticket.
+Analyst: Both entries refer to the same account and the same message.
+Engineer: The connection history also matches. There is only one affected device in these records.
+Manager: Keep the evidence and merge the duplicate entry into the active case.",The duplicate ticket is [MASK] longer open. The evidence is attached to the active case.,no
+IC-042,CASE-031,Duplicate ticket,Support,"Manager: The queue currently shows two separate incidents for the same suspicious message.
+Support: The user submitted one ticket and then called us. The call created the second ticket.
+Analyst: Both entries refer to the same account and the same message.
+Engineer: The connection history also matches. There is only one affected device in these records.
+Manager: Keep the evidence and merge the duplicate entry into the active case.",The duplicate ticket is no [MASK] open. The evidence is attached to the active case.,longer
+IC-043,CASE-032,Access restored,Engineer,"Support: The owner is asking whether the replacement device is ready.
+Engineer: The replacement has the approved configuration and a new account session.
+Analyst: The suspicious activity was limited to the original session. That session has been revoked.
+Manager: Keep the original device isolated and let the owner work from the replacement.
+Support: The owner has confirmed that the application works on the replacement device.",The replacement device is [MASK] longer restricted. The original device remains in evidence storage.,no
+IC-044,CASE-032,Access restored,Engineer,"Support: The owner is asking whether the replacement device is ready.
+Engineer: The replacement has the approved configuration and a new account session.
+Analyst: The suspicious activity was limited to the original session. That session has been revoked.
+Manager: Keep the original device isolated and let the owner work from the replacement.
+Support: The owner has confirmed that the application works on the replacement device.",The replacement device is no [MASK] restricted. The original device remains in evidence storage.,longer
+IC-045,CASE-033,Obsolete address,Engineer,"Manager: The preliminary note lists the old application address as the blocked destination.
+Engineer: The application moved last month. The unfamiliar address is a separate destination.
+Analyst: The connection records distinguish the approved application from the unfamiliar destination.
+Support: The application owner has supplied the current approved address.
+Manager: Keep the unfamiliar destination blocked and correct the application details in the case.",The old application address is [MASK] longer current. The approved address is available in the case notes.,no
+IC-046,CASE-033,Obsolete address,Engineer,"Manager: The preliminary note lists the old application address as the blocked destination.
+Engineer: The application moved last month. The unfamiliar address is a separate destination.
+Analyst: The connection records distinguish the approved application from the unfamiliar destination.
+Support: The application owner has supplied the current approved address.
+Manager: Keep the unfamiliar destination blocked and correct the application details in the case.",The old application address is no longer current. The approved address is [MASK] in the case notes.,available
+IC-047,CASE-034,Transfer confirmation,Manager,"Support: The first message says the customer requested this file transfer.
+Manager: The customer delivery owner has no matching request on their schedule.
+Analyst: The transfer used the account under investigation, after an unusual sign-in.
+Engineer: The destination account is not the one used for approved customer deliveries.
+Support: The delivery owner has checked the file name and destination with the customer.",The customer did [MASK] request this transfer. Keep the transfer records with the account evidence.,not
+IC-048,CASE-035,Message follow-up,Manager,"Support: The user reopened the suspicious message while describing the problem.
+Analyst: The message itself is retained, but they must stop interacting with its contents.
+Engineer: The destination is blocked at the gateway. The link is still visible in the mailbox.
+Manager: Tell the user to leave the message alone. The analyst can use the evidence copy.
+Support: The user has closed the message and is using the replacement device.",The [MASK] must not open the link again. The analyst already has the original message.,user
+IC-049,CASE-036,Local collection,Engineer,"Support: The device owner asked whether to send the laptop to the remote support office.
+Analyst: The local team can collect the evidence without moving the device between sites.
+Engineer: The local collection network is ready, and the agent is available.
+Manager: Keep the device at its current site and preserve its power state.
+Support: The owner has brought it to the local support desk without restarting it.",The laptop is at the local [MASK]. The remote support office does not need the device.,office
+IC-050,CASE-036,Local collection,Engineer,"Support: The device owner asked whether to send the laptop to the remote support office.
+Analyst: The local team can collect the evidence without moving the device between sites.
+Engineer: The local collection network is ready, and the agent is available.
+Manager: Keep the device at its current site and preserve its power state.
+Support: The owner has brought it to the local support desk without restarting it.",The laptop is at the local office. The remote support office does [MASK] need the device.,not
+IC-051,CASE-037,Approval withdrawn,Analyst,"Manager: The application owner initially approved returning the server to service.
+Analyst: The configuration review found an unapproved connection that still needs investigation.
+Engineer: The server is isolated again. The replacement instance is serving normal traffic.
+Support: The owner has been told about the configuration result and the replacement.
+Manager: Withdraw the earlier approval and leave the original server isolated.",The earlier recovery approval is [MASK] longer valid. The original server is still isolated.,no
+IC-052,CASE-037,Approval withdrawn,Analyst,"Manager: The application owner initially approved returning the server to service.
+Analyst: The configuration review found an unapproved connection that still needs investigation.
+Engineer: The server is isolated again. The replacement instance is serving normal traffic.
+Support: The owner has been told about the configuration result and the replacement.
+Manager: Withdraw the earlier approval and leave the original server isolated.",The earlier recovery approval is no [MASK] valid. The original server is still isolated.,longer
+IC-053,CASE-038,Upload status,Analyst,"Support: The user says the progress bar finished before the connection was blocked.
+Engineer: The gateway ended the connection before the final data request completed.
+Analyst: The transfer record contains only the partial upload. The destination did not receive the full archive.
+Manager: Preserve the partial transfer details and confirm which files were included.
+Engineer: The destination is blocked and the account session is revoked.",The upload did [MASK] complete. The transfer record is retained for the scope investigation.,not
+IC-054,CASE-039,Account in use,Engineer,"Manager: The initial list includes a support account that was retired last year.
+Engineer: That account has been disabled since the handover. It has no current sessions.
+Analyst: The suspicious session used the replacement support account.
+Support: The current support team has confirmed which account they normally use.
+Manager: Keep the retired account disabled and investigate the replacement account.",The retired account is [MASK] longer in use. The replacement account is the one under investigation.,no
+IC-055,CASE-040,Session persistence,Analyst,"Support: The owner thought resetting the password would end the existing browser session.
+Engineer: The application kept accepting the old session token after the reset.
+Analyst: That token was used from the unfamiliar device again.
+Manager: Revoke the application session and verify that the token is rejected.
+Engineer: The session is revoked. The application is now asking for a new sign-in.",The old token is [MASK] longer accepted. The owner must sign in again on the clean device.,no
+IC-056,CASE-040,Session persistence,Analyst,"Support: The owner thought resetting the password would end the existing browser session.
+Engineer: The application kept accepting the old session token after the reset.
+Analyst: That token was used from the unfamiliar device again.
+Manager: Revoke the application session and verify that the token is rejected.
+Engineer: The session is revoked. The application is now asking for a new sign-in.",The old token is no [MASK] accepted. The owner must sign in again on the clean device.,longer
+IC-057,CASE-041,Location verification,Engineer,"Support: The ticket names the warehouse office because that was the caller's location.
+Analyst: The affected account session was on a device assigned to the sales office.
+Engineer: The inventory and gateway records both identify the sales office.
+Manager: Contact the sales support desk before sending anyone to the warehouse.
+Support: The sales team has located the device and disconnected its normal network connection.",The affected device is in the sales [MASK]. The warehouse office is not part of this incident.,office
+IC-058,CASE-042,Evidence retention,Analyst,"Support: The service owner asked whether the collected files could be deleted after recovery.
+Analyst: The service is back, but the investigation is still open.
+Engineer: The collected originals are in the restricted evidence folder.
+Manager: Keep the originals until the case retention review is complete.
+Support: The service owner has agreed to use the normal application copies instead.",The evidence files must not be deleted. The [MASK] collection is still needed for the investigation.,original
+IC-059,CASE-043,Temporary device use,Engineer,"Support: The owner has been working from the spare laptop since the original device was collected.
+Engineer: The permanent replacement passed its configuration and access checks.
+Analyst: The original device is still retained for the investigation.
+Manager: Move the owner to the permanent replacement and return the spare to the support desk.
+Support: The owner has confirmed that the application works on the permanent replacement.",The spare laptop is [MASK] longer needed. The permanent replacement is now in use.,no
+IC-060,CASE-043,Temporary device use,Engineer,"Support: The owner has been working from the spare laptop since the original device was collected.
+Engineer: The permanent replacement passed its configuration and access checks.
+Analyst: The original device is still retained for the investigation.
+Manager: Move the owner to the permanent replacement and return the spare to the support desk.
+Support: The owner has confirmed that the application works on the permanent replacement.",The spare laptop is no [MASK] needed. The permanent replacement is now in use.,longer
+IC-061,CASE-044,Lost security key,Support,"Support: The employee left a security key on the train.
+Analyst: The account password has been changed.
+Engineer: The lost key is still registered to the account.
+Manager: Remove that key before issuing a replacement.",The lost security key must be removed from the [MASK].,account
+IC-062,CASE-045,Backup verification,Engineer,"Support: The shared folder was restored overnight.
+Analyst: The backup job reports success but we have not opened the recovered files.
+Manager: Check a sample before closing the recovery ticket.
+Engineer: The sample files open and their contents match the saved copies.",The recovered files match the saved [MASK].,copies
+IC-063,CASE-046,Expired certificate,Analyst,"Support: Staff cannot open the internal dashboard.
+Engineer: The application process is running and the database is responding.
+Analyst: The browser warning says the certificate expired yesterday.
+Manager: Renew the certificate and repeat the connection check.",The connection failed because the certificate had [MASK].,expired
+IC-064,CASE-047,Exposed access token,Engineer,"Analyst: An access token appeared in a public build log.
+Support: The repository is now private but the log was already downloaded.
+Manager: Revoke the exposed token and issue a replacement.
+Engineer: The exposed token has been revoked and requests using it are rejected.",Requests using the exposed token are now [MASK].,rejected
+IC-065,CASE-048,Unexpected mail rule,Analyst,"Support: The employee is missing messages from the finance team.
+Engineer: The mail server delivered those messages to the mailbox.
+Analyst: A new mailbox rule moved them into the archive automatically.
+Manager: Disable the rule and move the messages back to the inbox.",The mailbox rule moved messages into the [MASK].,archive
+IC-066,CASE-049,Shared folder permissions,Manager,"Support: A contractor could open the payroll folder.
+Analyst: A broad group grant was added during migration.
+Engineer: The grant has been removed and the contractor cannot open the folder now.
+Manager: Record the change and ask the folder owner to review the remaining permissions.",The folder owner should review who still has [MASK].,access
